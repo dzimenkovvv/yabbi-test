@@ -10,7 +10,6 @@ import (
 	"yabbi_test/internal/partner"
 )
 
-// BidOutcome — результат отправки запроса одному партнёру.
 type BidOutcome struct {
 	PartnerUID string
 	Success    bool

@@ -30,10 +30,6 @@ func main() {
 
 	store := partner.NewInMemoryStore()
 
-	// В задании нет реальных DSP-эндпоинтов для интеграции — используем
-	// dsp.FakeClient как продуктовую заглушку, а не как тестовый инструмент.
-	// Реальная HTTP-реализация подключается через тот же интерфейс dsp.Client,
-	// без изменений в auction/service.go — см. README.
 	client := dsp.NewFakeClient()
 
 	svc := auction.NewService(store, client, logger, dispatchTimeout)
